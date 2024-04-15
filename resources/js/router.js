@@ -2,9 +2,12 @@ import { createMemoryHistory, createRouter } from 'vue-router'
 
 const routes = [
     {
+        // path: '/add',
+        // name: 'credentials.add'
+    },
+    {
         // path: '/',
-        // component: () => import('./components/Index.vue'),
-        // name: 'index'
+        // name: 'credentials.list'
     },
 ];
 

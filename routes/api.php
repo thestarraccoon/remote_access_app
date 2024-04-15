@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/add', [App\Http\Controllers\AddConnectionController::class, 'add']);
+Route::put('/{id}', [App\Http\Controllers\AddConnectionController::class, 'update']);
+Route::delete('/{id}', [App\Http\Controllers\AddConnectionController::class, 'delete']);
+Route::get('/', [\App\Http\Controllers\API\ShowConnectionsController::class, 'index']);
