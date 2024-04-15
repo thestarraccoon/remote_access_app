@@ -6,3 +6,41 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+#app {
+    width: 80%;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+}
+
+.main-table-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.btn-add {
+
+    width: 150px;
+}
+
+div.table-row {
+    appearance: none;
+}
+
+.hand td{
+    cursor: pointer;
+}
+
+.col-small {
+    width: 50px;
+}
+
+.cols-edit-remove {
+    width: 40px;
+}
