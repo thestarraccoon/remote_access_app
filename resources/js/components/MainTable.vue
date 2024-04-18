@@ -3,9 +3,10 @@
     import Modal from "@/components/ModalWindow.vue";
     import EditIcon from "@/components/svg/EditSvgIcon.vue";
     import DeleteIcon from "@/components/svg/DeleteSvgIcon.vue";
-    import {ref} from "vue";
+    import { ref } from "vue";
     import modal from "bootstrap/js/src/modal.js";
     import {Bootstrap5Pagination} from "laravel-vue-pagination";
+    import SearchBar from "@/components/SearchBar.vue";
 
     export default {
         name: 'MainTable',
@@ -16,21 +17,26 @@
             },
         },
 
+        props: ['queryForPagination'],
+
         components: {
+            SearchBar,
             Modal,
             EditIcon,
             DeleteIcon,
-            pagination: Bootstrap5Pagination
+            pagination: Bootstrap5Pagination,
         },
 
         data() {
             return {
                 showModal: ref(false),
                 modalData: {},
+                savedSearch: '',
+                test: {}
             }
         },
 
-        setup() {
+        setup(props) {
             const onSuccess = () => {
                 const Toast = Swal.mixin({
                     toast: true,
@@ -47,8 +53,15 @@
             };
 
             const connections = ref({});
-            const getConnectionsList = async (page = 1) => {
-                const response = await fetch(`/api?page=${page}`);
+            const url_path = ref({});
+
+            const getConnectionsList = async (page = 1, searchQuery = 0, url_path = '') => {
+                if (searchQuery === 0) {
+                    url_path = `/api?page=${page}`;
+                } else {
+                    url_path = `/api/search?query=${searchQuery}&page=${page}`;
+                }
+                const response = await fetch(url_path);
                 connections.value = await response.json();
             }
 
@@ -77,12 +90,19 @@
             editConnection(connection) {
                 this.modalData = Object.assign({}, connection);
             },
+
+            search_results (s_res) {
+                // this.connections.data = s_res.connections;
+                this.getConnectionsList(1, s_res.connections);
+                this.savedSearch = s_res.connections;
+            },
         },
     }
 </script>
 
 <template>
-    <pagination align="center" :data="connections" @pagination-change-page="getConnectionsList"></pagination>
+    <SearchBar @connections_search='search_results'/>
+    <pagination align="right" :data="connections" :queryForPagination="savedSearch" @pagination-change-page="getConnectionsList"></pagination>
     <table class="table" >
         <thead>
         <tr>
