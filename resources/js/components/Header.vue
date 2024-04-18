@@ -1,9 +1,8 @@
 <template>
-<div class="header mb-5">
+<div class="header mb-4">
     <div class="main-table-title">
         <h2 class="w-50">Remote Access App</h2>
         <div class="btn btn-info btn-add" @click="showModal = true">Добавить
-
         <Teleport to="body">
             <modal :show="showModal" header="Add Remote Access" @close="showModal = false">
                 <template #body>

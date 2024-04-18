@@ -11,11 +11,14 @@
     width: 80%;
     margin: 0 auto;
 }
+.body {
+    font-family: 'Raleway', sans-serif ;
+}
 .header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 200px;
+    height: 120px;
 }
 
 .main-table-title {
@@ -43,4 +46,8 @@ div.table-row {
 
 .cols-edit-remove {
     width: 40px;
+}
+
+.pagination {
+    margin-bottom: 1.5rem !important;
 }
