@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1584c7df-8eb8-4338-ad62-b98eeb9a6150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/SearchBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ShowConnectionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ShowConnectionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ShowConnectionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShowConnectionsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/MainTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MainTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SearchBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,6 +249,7 @@
       <workItem from="1713286265094" duration="10852000" />
       <workItem from="1713376228836" duration="2254000" />
       <workItem from="1713461327195" duration="10427000" />
+      <workItem from="1713615118618" duration="4530000" />
     </task>
     <servers />
   </component>
