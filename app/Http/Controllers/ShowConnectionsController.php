@@ -1,23 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SearchRequest;
 use App\Models\Connection;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Schema;
 
 class ShowConnectionsController extends Controller
 {
-    public function index()
+    public function index():object
     {
         $connections = Connection::paginate(10);
 
         return response()->json($connections);
     }
 
-    public function getConnections(SearchRequest $request) {
+    public function getConnections(SearchRequest $request):object {
         $search_query = $request->validated();
 
         $query = Connection::query();

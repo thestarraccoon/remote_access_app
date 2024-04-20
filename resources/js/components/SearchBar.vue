@@ -13,13 +13,6 @@ export default {
 
     methods: {
         search(){
-            // axios.get('/api/search', { params: { query: this.searchQuery }})
-            //     .then(response => {
-            //         //connections.value = response.data.data;
-            //         this.$emit('connections_search', {
-            //             connections: response.data.data,
-            //         })
-            //     })
             this.$emit('connections_search', {
                 connections: this.searchQuery,
             })

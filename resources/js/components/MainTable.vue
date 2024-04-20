@@ -17,8 +17,6 @@
             },
         },
 
-        props: ['queryForPagination'],
-
         components: {
             SearchBar,
             Modal,
@@ -31,8 +29,6 @@
             return {
                 showModal: ref(false),
                 modalData: {},
-                savedSearch: '',
-                test: {}
             }
         },
 
@@ -54,9 +50,17 @@
 
             const connections = ref({});
             const url_path = ref({});
+            const savedSearch = ref('');
 
-            const getConnectionsList = async (page = 1, searchQuery = 0, url_path = '') => {
-                if (searchQuery === 0) {
+            const saveSearchQuery = (sq) => {
+                savedSearch.value = sq;
+            };
+
+            const getConnectionsList = async (page = 1, searchQuery = '', url_path = '') =>
+            {
+                searchQuery = savedSearch.value;
+
+                if (searchQuery === '') {
                     url_path = `/api?page=${page}`;
                 } else {
                     url_path = `/api/search?query=${searchQuery}&page=${page}`;
@@ -65,7 +69,7 @@
                 connections.value = await response.json();
             }
 
-            return { onSuccess, getConnectionsList, connections }
+            return { onSuccess, getConnectionsList, connections, saveSearchQuery, savedSearch }
         },
 
         mounted() {
@@ -92,9 +96,8 @@
             },
 
             search_results (s_res) {
-                // this.connections.data = s_res.connections;
+                this.saveSearchQuery(s_res.connections);
                 this.getConnectionsList(1, s_res.connections);
-                this.savedSearch = s_res.connections;
             },
         },
     }
@@ -102,7 +105,7 @@
 
 <template>
     <SearchBar @connections_search='search_results'/>
-    <pagination align="right" :data="connections" :queryForPagination="savedSearch" @pagination-change-page="getConnectionsList"></pagination>
+    <pagination align="right" :data="connections" @pagination-change-page="getConnectionsList"></pagination>
     <table class="table" >
         <thead>
         <tr>
@@ -161,6 +164,9 @@
                 >
                     {{ connection.login + ':' + connection.password + '@' + connection.host }}
                 </td>
+                <td v-clipboard="connection.note"
+                    v-clipboard:success="onSuccess"
+                >{{ connection.note }}</td>
             </tr>
         </tbody>
     </table>

@@ -18,8 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/add', [App\Http\Controllers\AddConnectionController::class, 'add']);
-Route::put('/{id}', [App\Http\Controllers\AddConnectionController::class, 'update']);
-Route::delete('/{id}', [App\Http\Controllers\AddConnectionController::class, 'delete']);
-Route::get('/', [\App\Http\Controllers\API\ShowConnectionsController::class, 'index']);
-Route::get('/search', [\App\Http\Controllers\API\ShowConnectionsController::class, 'getConnections']);
+Route::post('/add',     [App\Http\Controllers\AddConnectionController::class, 'add']);
+Route::put('/{id}',     [App\Http\Controllers\AddConnectionController::class, 'update']);
+Route::delete('/{id}',  [App\Http\Controllers\AddConnectionController::class, 'delete']);
+Route::get('/',         [App\Http\Controllers\ShowConnectionsController::class, 'index']);
+Route::get('/search',   [App\Http\Controllers\ShowConnectionsController::class, 'getConnections']);
