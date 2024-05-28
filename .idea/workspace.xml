@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1584c7df-8eb8-4338-ad62-b98eeb9a6150" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Auth/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Auth/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/svg/DeleteSvgIcon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/svg/DeleteSvgIcon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddConnectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddConnectionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShowConnectionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShowConnectionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_04_07_174153_create_connections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_04_07_174153_create_connections_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MainTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MainTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +220,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\wamp64\www\remote_access_app\resources\views" />
+      <recent name="E:\wamp64\www\remote_access_app\resources\views\layouts" />
       <recent name="E:\wamp64\www\remote_access_app\resources\js\components" />
     </key>
   </component>
@@ -246,7 +268,15 @@
       <workItem from="1713286265094" duration="10852000" />
       <workItem from="1713376228836" duration="2254000" />
       <workItem from="1713461327195" duration="10427000" />
-      <workItem from="1713615118618" duration="5881000" />
+      <workItem from="1713615118618" duration="12621000" />
+      <workItem from="1713799870563" duration="4395000" />
+      <workItem from="1714499559129" duration="620000" />
+      <workItem from="1715357634013" duration="4238000" />
+      <workItem from="1715442311554" duration="6159000" />
+      <workItem from="1715459920866" duration="1420000" />
+      <workItem from="1715532038318" duration="7584000" />
+      <workItem from="1715548578242" duration="2815000" />
+      <workItem from="1716918916517" duration="3311000" />
     </task>
     <servers />
   </component>

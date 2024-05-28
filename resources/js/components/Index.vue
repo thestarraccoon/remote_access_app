@@ -1,20 +1,22 @@
 <template>
-    <Header/>
-    <MainTable/>
+<!--    <router-link :to="{ name: 'login'}">Login</router-link>-->
+<!--    <router-link :to="{ name: 'register'}">Register</router-link>-->
+    <a @click.prevent='logout' href="#">Logout</a>
+
     <router-view></router-view>
 </template>
 
 <script>
-    import Header from './Header.vue'
-    import MainTable from './MainTable.vue'
-    import SearchBar from "./SearchBar.vue";
     export default {
         name: 'Index',
 
-        components: {
-            Header,
-            MainTable,
-            SearchBar
-        },
+        methods: {
+            logout() {
+                axios.post('/logout')
+                    .then (res =>  {
+                    this.$router.push({name: 'login'})
+                })
+            },
+        }
     }
 </script>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddRequest;
 use App\Models\Connection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class AddConnectionController extends Controller
@@ -12,7 +13,7 @@ class AddConnectionController extends Controller
     public function add(AddRequest $request): object
     {
         $data = $request->validated();
-
+        $data['user_id'] = Auth::id();
         $connection = Connection::create($data);
 
         return $connection;
