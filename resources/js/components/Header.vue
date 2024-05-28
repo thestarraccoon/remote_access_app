@@ -94,7 +94,8 @@ export default {
         addRemoteAccess(connectionData) {
             axios.post('/api/add', connectionData)
                 .then(response => {
-                    console.log(response);
+                    console.log(123);
+                    this.$emit('call-parent-method');
                 })
         }
     }

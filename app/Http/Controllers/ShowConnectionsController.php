@@ -11,7 +11,6 @@ class ShowConnectionsController extends Controller
     public function index():object
     {
         $connections = Connection::paginate(10);
-
         return response()->json($connections);
     }
 

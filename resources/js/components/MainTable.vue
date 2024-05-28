@@ -7,6 +7,7 @@
     import modal from "bootstrap/js/src/modal.js";
     import {Bootstrap5Pagination} from "laravel-vue-pagination";
     import SearchBar from "@/components/SearchBar.vue";
+    import Header from "@/components/Header.vue";
 
     export default {
         name: 'MainTable',
@@ -18,6 +19,7 @@
         },
 
         components: {
+            Header,
             SearchBar,
             Modal,
             EditIcon,
@@ -67,6 +69,7 @@
                 }
                 const response = await fetch(url_path);
                 connections.value = await response.json();
+                // console.log(response);
             }
 
             return { onSuccess, getConnectionsList, connections, saveSearchQuery, savedSearch }
@@ -104,6 +107,7 @@
 </script>
 
 <template>
+    <Header @call-parent-method="getConnectionsList"></Header>
     <SearchBar @connections_search='search_results'/>
     <pagination align="right" :data="connections" @pagination-change-page="getConnectionsList"></pagination>
     <table class="table" >
